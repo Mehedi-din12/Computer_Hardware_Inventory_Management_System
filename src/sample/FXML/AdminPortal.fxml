@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<GridPane alignment="center" hgap="10" style="-fx-background-color: #e8f8ff;" vgap="10" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.AdminPortalController">
+  <children>
+    <AnchorPane prefHeight="600.0" prefWidth="800.0">
+      <children>
+        <ListView fx:id="listView" layoutX="27.0" layoutY="135.0" onMouseClicked="#handleListViewMouseClicked" prefHeight="358.0" prefWidth="315.0" style="-fx-background-color: #E6E6FA;" />
+        <HBox layoutX="20.0" layoutY="514.0" prefHeight="64.0" prefWidth="448.0">
+          <children>
+            <Button fx:id="viewDetailsButton" mnemonicParsing="false" onAction="#handleViewDetailsButton" prefHeight="50.0" prefWidth="131.0" text="View Details">
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Button>
+            <Button fx:id="editButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleEditButton" prefHeight="50.0" prefWidth="61.0" text="Edit">
+              <HBox.margin>
+                <Insets left="15.0" />
+              </HBox.margin>
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Button>
+            <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#handleDeleteButton" prefHeight="50.0" prefWidth="80.0" text="Delete">
+              <HBox.margin>
+                <Insets left="15.0" />
+              </HBox.margin>
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Button>
+            <ComboBox fx:id="deleteComboBox" prefHeight="48.0" prefWidth="121.0" promptText="Delete Option">
+              <HBox.margin>
+                <Insets left="20.0" />
+              </HBox.margin>
+            </ComboBox>
+          </children>
+        </HBox>
+        <VBox layoutX="474.0" layoutY="134.0" prefHeight="358.0" prefWidth="315.0">
+          <children>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="338.0">
+              <children>
+                <TextField fx:id="fullNameTextField" prefHeight="50.0" prefWidth="336.0" promptText="Input Full Name">
+                  <font>
+                    <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                    <Insets right="10.0" top="10.0" />
+                  </HBox.margin>
+                </TextField>
+              </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="10.0" prefHeight="54.0" prefWidth="338.0">
+              <children>
+                <TextField fx:id="userNameTextField" prefHeight="50.0" prefWidth="336.0" promptText=" Input User Name">
+                  <font>
+                    <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                    <Insets right="10.0" top="10.0" />
+                  </HBox.margin>
+                </TextField>
+              </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="64.0" prefHeight="54.0" prefWidth="338.0">
+              <children>
+                <TextField fx:id="contactNoTextField" prefHeight="50.0" prefWidth="336.0" promptText="Input Contact No">
+                  <font>
+                    <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                    <Insets right="10.0" top="10.0" />
+                  </HBox.margin>
+                </TextField>
+              </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="119.0" prefHeight="54.0" prefWidth="338.0">
+              <children>
+                <TextField fx:id="passwordTextField" prefHeight="50.0" prefWidth="336.0" promptText="Input Password">
+                  <font>
+                    <Font size="18.0" />
+                  </font>
+                  <HBox.margin>
+                    <Insets right="10.0" top="10.0" />
+                  </HBox.margin>
+                </TextField>
+              </children>
+            </HBox>
+            <HBox layoutX="10.0" layoutY="173.0" prefHeight="54.0" prefWidth="338.0">
+              <children>
+                <DatePicker fx:id="joininigDatePicker" prefHeight="47.0" prefWidth="335.0" promptText="Input Joinig Date">
+                  <HBox.margin>
+                    <Insets right="10.0" top="10.0" />
+                  </HBox.margin>
+                </DatePicker>
+              </children>
+            </HBox>
+            <HBox prefHeight="98.0" prefWidth="343.0">
+              <children>
+                <Button fx:id="selectProfilePhotoButton" mnemonicParsing="false" onAction="#handleSelectProfilePhotoButton" prefHeight="55.0" prefWidth="138.0" text="Select Photo">
+                  <HBox.margin>
+                    <Insets top="10.0" />
+                  </HBox.margin>
+                  <font>
+                    <Font name="System Bold" size="14.0" />
+                  </font>
+                </Button>
+                <ImageView fx:id="adminImageView" fitHeight="98.0" fitWidth="129.0" pickOnBounds="true" preserveRatio="true">
+                  <HBox.margin>
+                    <Insets left="60.0" />
+                  </HBox.margin>
+                </ImageView>
+              </children>
+            </HBox>
+          </children>
+        </VBox>
+        <Label alignment="CENTER" layoutX="237.0" layoutY="22.0" prefHeight="71.0" prefWidth="352.0" style="-fx-background-color: #cff0ff;" text="Admin Portal">
+          <font>
+            <Font name="System Bold" size="24.0" />
+          </font>
+        </Label>
+        <Button fx:id="backButton" layoutX="651.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleBackButton" prefHeight="71.0" prefWidth="110.0" text="Back">
+          <font>
+            <Font name="System Bold" size="18.0" />
+          </font>
+        </Button>
+        <HBox layoutX="476.0" layoutY="514.0" prefHeight="64.0" prefWidth="315.0">
+          <children>
+            <Button fx:id="addButton" mnemonicParsing="false" onAction="#handleAddButton" prefHeight="50.0" prefWidth="88.0" text="Add">
+              <HBox.margin>
+                <Insets left="50.0" />
+              </HBox.margin>
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Button>
+            <Button fx:id="clearForm" layoutX="40.0" layoutY="10.0" mnemonicParsing="false" onAction="#handleClearForm" prefHeight="50.0" prefWidth="121.0" text="Clear Form">
+              <HBox.margin>
+                <Insets left="60.0" />
+              </HBox.margin>
+              <font>
+                <Font name="System Bold" size="18.0" />
+              </font>
+            </Button>
+          </children>
+        </HBox>
+        <ComboBox fx:id="navigationComboBox" layoutX="14.0" layoutY="29.0" prefHeight="25.0" prefWidth="161.0" promptText="Go Other Window" />
+        <Button fx:id="goButton" layoutX="182.0" layoutY="29.0" mnemonicParsing="false" onAction="#handleGoButtonClick" prefHeight="25.0" prefWidth="45.0" text="Go!" />
+      </children>
+    </AnchorPane>
+  </children>
+  <columnConstraints>
+    <ColumnConstraints />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints />
+  </rowConstraints>
+</GridPane>

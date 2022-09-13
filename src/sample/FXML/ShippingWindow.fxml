@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="599.0"
+           prefWidth="756.0" style="-fx-background-color: #e8f8ff;" xmlns="http://javafx.com/javafx/16"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.ShippingWindowController">
+  <children>
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="484.0" prefWidth="756.0" StackPane.alignment="CENTER">
+      <children>
+        <TextField fx:id="totalAmountTextField" layoutX="280.0" layoutY="409.0" prefHeight="39.0" prefWidth="149.0">
+          <font>
+            <Font size="18.0"/>
+          </font>
+        </TextField>
+        <Button fx:id="shipButton" layoutX="83.0" layoutY="465.0" mnemonicParsing="false"
+                onAction="#handleShipButtonClick" prefHeight="31.0" prefWidth="113.0"
+                style="-fx-background-color: #94f2ef;" text="Ship!">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button fx:id="viewShippedProducts" layoutX="518.0" layoutY="451.0" mnemonicParsing="false"
+                onAction="#handleViewShippedProducts" text="View Shipped Products">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <TableView fx:id="productTableView" layoutX="84.0" layoutY="108.0" prefHeight="243.0" prefWidth="588.0">
+          <columns>
+            <TableColumn fx:id="name" prefWidth="75.0" text="Name"/>
+            <TableColumn fx:id="itemID" prefWidth="75.0" text="ID"/>
+            <TableColumn fx:id="inventory" prefWidth="117.0" text=" Inventory"/>
+            <TableColumn fx:id="shippedInventory" prefWidth="112.0" text="Shipped Products"/>
+            <TableColumn fx:id="type" prefWidth="108.0" text="Type"/>
+            <TableColumn fx:id="price" prefWidth="101.0" text="Price"/>
+          </columns>
+        </TableView>
+        <Button fx:id="backButton" layoutX="628.0" layoutY="30.0" mnemonicParsing="false"
+                onAction="#handleBackButtonClick" text="Back">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <TextField fx:id="addressTextField" layoutX="190.0" layoutY="361.0" prefHeight="39.0" prefWidth="149.0">
+          <font>
+            <Font size="18.0"/>
+          </font>
+        </TextField>
+        <Button layoutX="91.0" layoutY="43.0" mnemonicParsing="false" style="-fx-background-color: #94f2ef;"
+                text="Select a Product">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="84.0" layoutY="361.0" mnemonicParsing="false" style="-fx-background-color: #94f2ef;"
+                text="Address">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="83.0" layoutY="409.0" mnemonicParsing="false" style="-fx-background-color: #94f2ef;"
+                text="Enter total amount">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <ComboBox fx:id="navigationComboBox" layoutX="65.0" layoutY="2.0" prefWidth="150.0"
+                  promptText="Go Other Window"/>
+        <Button fx:id="goButton" layoutX="241.0" layoutY="2.0" mnemonicParsing="false" onAction="#handleGoButtonClick"
+                text="Go!">
+          <font>
+            <Font name="System Bold" size="13.0"/>
+          </font>
+        </Button>
+      </children>
+    </Pane>
+  </children>
+</StackPane>

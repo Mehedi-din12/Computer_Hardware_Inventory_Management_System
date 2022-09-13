@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="598.0"
+           prefWidth="766.0" style="-fx-background-color: #e8f8ff;" xmlns="http://javafx.com/javafx/16"
+           xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.EditDetailsController">
+  <children>
+    <Pane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="573.0" prefWidth="758.0" StackPane.alignment="CENTER">
+      <children>
+        <ImageView fx:id="imageOfProductView" fitHeight="175.0" fitWidth="217.0" layoutX="527.0" layoutY="181.0"
+                   pickOnBounds="true" preserveRatio="true"/>
+        <TextField fx:id="inventoryTextField" layoutX="165.0" layoutY="403.0" prefHeight="33.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <TextField fx:id="idTextField" layoutX="165.0" layoutY="123.0" prefHeight="33.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <TextField fx:id="typeTextField" layoutX="165.0" layoutY="179.0" prefHeight="33.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <TextField fx:id="nameTextField" layoutX="165.0" layoutY="66.0" prefHeight="33.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <TextField fx:id="quantityTextField" layoutX="165.0" layoutY="232.0" prefHeight="33.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <TextField fx:id="priceTextField" layoutX="165.0" layoutY="350.0" prefHeight="33.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <TextField fx:id="shippedInventoryTextField" layoutX="585.0" layoutY="63.0" prefHeight="39.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <Text layoutX="38.0" layoutY="497.0" strokeType="OUTSIDE" strokeWidth="0.0"/>
+        <Button fx:id="backButton" layoutX="435.0" layoutY="491.0" mnemonicParsing="false"
+                onAction="#handleBackButtonClick" text="Back">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button fx:id="updateButton" layoutX="231.0" layoutY="491.0" mnemonicParsing="false"
+                onAction="#handleUpdateButtonClick" text="Update">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <DatePicker fx:id="datePicker" layoutX="165.0" layoutY="290.0" prefHeight="33.0" prefWidth="149.0"/>
+        <TextField fx:id="brandTextField" layoutX="585.0" layoutY="127.0" prefHeight="39.0" prefWidth="149.0">
+          <font>
+            <Font size="19.0"/>
+          </font>
+        </TextField>
+        <Button fx:id="changePhotoButton" layoutX="379.0" layoutY="179.0" mnemonicParsing="false"
+                onAction="#handleChangePhotoButtonClick" style="-fx-background-color: #94f2ef;" text="Change Photo">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="35.0" layoutY="63.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0"
+                style="-fx-background-color: #94f2ef;" text="Name">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="32.0" layoutY="179.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0"
+                style="-fx-background-color: #94f2ef;" text="Type">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="32.0" layoutY="120.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0"
+                style="-fx-background-color: #94f2ef;" text="ID">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="32.0" layoutY="287.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0"
+                style="-fx-background-color: #94f2ef;" text="Date">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="32.0" layoutY="229.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0"
+                style="-fx-background-color: #94f2ef;" text="Quantity">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="33.0" layoutY="347.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0"
+                style="-fx-background-color: #94f2ef;" text="Price">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="33.0" layoutY="400.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="107.0"
+                style="-fx-background-color: #94f2ef;" text="Inventory">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="379.0" layoutY="63.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="181.0"
+                style="-fx-background-color: #94f2ef;" text="Shipped Inventory">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+        <Button layoutX="379.0" layoutY="120.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="181.0"
+                style="-fx-background-color: #94f2ef;" text="Type">
+          <font>
+            <Font name="System Bold" size="18.0"/>
+          </font>
+        </Button>
+      </children>
+    </Pane>
+  </children>
+</StackPane>
